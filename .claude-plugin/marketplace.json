@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "draxi-claude-plugins",
+  "description": "Draxi's collection of Claude Code plugins",
+  "owner": {
+    "name": "drdraxi"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "homepage": "https://github.com/drdraxi/draxi-claude-plugins"
+  },
+  "plugins": [
+    {
+      "name": "windows-capture",
+      "description": "Capture Windows screenshots - full screen, specific monitors, windows, or regions. Provides screen info and window enumeration.",
+      "version": "1.0.0",
+      "author": {
+        "name": "drdraxi"
+      },
+      "source": "./plugins/windows-capture",
+      "category": "productivity",
+      "homepage": "https://github.com/drdraxi/draxi-claude-plugins",
+      "tags": ["screenshot", "capture", "windows", "screen", "monitor"]
+    }
+  ]
+}

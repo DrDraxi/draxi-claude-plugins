@@ -1,0 +1,9 @@
+{
+  "name": "windows-capture",
+  "version": "1.0.0",
+  "description": "Capture Windows screenshots - full screen, specific monitors, windows, or regions. Provides screen info and window enumeration.",
+  "author": {
+    "name": "drdraxi"
+  },
+  "keywords": ["screenshot", "capture", "windows", "screen", "monitor"]
+}
