@@ -1,0 +1,8 @@
+{
+  "name": "ralph-loop",
+  "description": "Windows-compatible Ralph Loop plugin. Continuous self-referential AI loops for iterative development, implementing the Ralph Wiggum technique. Forked from Anthropic's official plugin with Node.js hooks for cross-platform support.",
+  "author": {
+    "name": "DrDraxi",
+    "email": ""
+  }
+}
