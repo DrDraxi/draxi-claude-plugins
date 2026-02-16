@@ -1,7 +1,12 @@
 import { mkdirSync, writeFileSync } from 'fs';
 
 function main() {
-  const args = process.argv.slice(2);
+  let args = process.argv.slice(2);
+  // When invoked with "$ARGUMENTS", bash passes everything as a single string.
+  // Split it into words so flag parsing (--max-iterations, etc.) still works.
+  if (args.length === 1 && !args[0].startsWith('-')) {
+    args = args[0].split(/\s+/).filter(Boolean);
+  }
   const promptParts = [];
   let maxIterations = 0;
   let completionPromise = 'null';
