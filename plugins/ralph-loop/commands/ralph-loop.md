@@ -1,7 +1,7 @@
 ---
 description: "Start Ralph Loop in current session"
 argument-hint: "PROMPT [--max-iterations N] [--completion-promise TEXT]"
-allowed-tools: ["Bash(node*setup-ralph-loop.mjs:*)"]
+allowed-tools: ["Bash(! node*setup-ralph-loop.mjs:*)", "Bash(node*setup-ralph-loop.mjs:*)"]
 hide-from-slash-command-tool: "true"
 ---
 

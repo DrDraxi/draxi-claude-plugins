@@ -33,8 +33,9 @@ Each plugin lives in `plugins/<name>/` and contains:
 
 **windows-capture**: Python scripts run via `uv run` with inline PEP 723 dependency metadata (no requirements.txt). Dependencies (`mss`, `Pillow`, `pywin32`) auto-install on first run. Scripts output JSON to stdout.
 
-**ralph-loop**: All scripts are Node.js `.mjs` files (not bash). This is intentional — the original Anthropic plugin uses `.sh` scripts that break on Windows because `${CLAUDE_PLUGIN_ROOT}` expands to backslash paths. Hook commands use single-quoted paths (e.g., `node '${CLAUDE_PLUGIN_ROOT}/hooks/stop-hook.mjs'`) to prevent bash backslash interpretation.
+**ralph-loop**: All scripts are Node.js `.mjs` files (not bash). This is intentional — the original Anthropic plugin uses `.sh` scripts that break on Windows because `${CLAUDE_PLUGIN_ROOT}` expands to backslash paths.
 
 ## Windows Path Convention
 
-When referencing `${CLAUDE_PLUGIN_ROOT}` in hook commands or command markdown code blocks, always wrap the path in **single quotes** to prevent bash from interpreting Windows backslashes as escape sequences. This applies to both `node` and `uv run` invocations.
+- **Command markdown code blocks** (` ```! `): These run through bash. Wrap `${CLAUDE_PLUGIN_ROOT}` paths in **single quotes** to prevent bash from interpreting Windows backslashes as escape sequences.
+- **Hook commands** (`hooks.json`): These do NOT go through bash the same way — single quotes become literal characters in the path. Use **no quotes** around `${CLAUDE_PLUGIN_ROOT}` in hook commands (e.g., `node ${CLAUDE_PLUGIN_ROOT}/hooks/stop-hook.mjs`).
