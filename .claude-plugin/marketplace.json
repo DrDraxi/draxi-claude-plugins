@@ -21,6 +21,18 @@
       "category": "productivity",
       "homepage": "https://github.com/drdraxi/draxi-claude-plugins",
       "tags": ["screenshot", "capture", "windows", "screen", "monitor"]
+    },
+    {
+      "name": "ralph-loop",
+      "description": "Windows-compatible Ralph Loop plugin. Continuous self-referential AI loops for iterative development using the Ralph Wiggum technique. Forked from Anthropic's official plugin with Node.js hooks for cross-platform support.",
+      "version": "1.0.0",
+      "author": {
+        "name": "DrDraxi"
+      },
+      "source": "./plugins/ralph-loop",
+      "category": "productivity",
+      "homepage": "https://github.com/drdraxi/draxi-claude-plugins",
+      "tags": ["loop", "ralph", "automation", "iterative", "windows"]
     }
   ]
 }
